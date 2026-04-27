@@ -336,7 +336,8 @@ static esp_err_t panel_nv3041a_init(esp_lcd_panel_t *panel)
 static esp_err_t panel_nv3041a_draw_bitmap(esp_lcd_panel_t *panel, int x_start, int y_start, int x_end, int y_end, const void *color_data)
 {
     nv3041a_panel_t *nv3041a = __containerof(panel, nv3041a_panel_t, base);
-    assert((x_start < x_end) && (y_start < y_end) && "start position must be smaller than end position");
+    assert(x_start < x_end);
+    assert(y_start < y_end);
     esp_lcd_panel_io_handle_t io = nv3041a->io;
 
     x_start += nv3041a->x_gap;

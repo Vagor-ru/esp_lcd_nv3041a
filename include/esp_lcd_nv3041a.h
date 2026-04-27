@@ -128,15 +128,15 @@ esp_err_t esp_lcd_new_panel_nv3041a(const esp_lcd_panel_io_handle_t io,
         .cs_gpio_num = cs, \
         .dc_gpio_num = dc, \
         .spi_mode = 0, \
-        .pclk_hz = 80 * 1000 * 1000, /* QSPI поддерживает более высокие частоты */ \
+        .pclk_hz = 80 * 1000 * 1000, /* QSPI supports higher frequencies */ \
         .trans_queue_depth = 10, \
         .on_color_trans_done = callback, \
         .user_ctx = callback_ctx, \
         .lcd_cmd_bits = 8, \
         .lcd_param_bits = 8, \
         .flags = { \
-            .quad_mode = 1, /* Включаем режим 4-линий */ \
-            .psram_dma_direct = 1, /* Оптимизация для PSRAM */ \
+            .quad_mode = 1, /* Enable 4-line mode */ \
+            .psram_dma_direct = 1, /* Optimization for PSRAM */ \
         }, \
     }
 
