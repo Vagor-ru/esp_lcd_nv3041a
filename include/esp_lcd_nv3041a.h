@@ -136,7 +136,7 @@ esp_err_t esp_lcd_new_panel_nv3041a(const esp_lcd_panel_io_handle_t io,
         .lcd_param_bits = 8, \
         .flags = { \
             .quad_mode = 1, /* Enable 4-line mode */ \
-            .psram_dma_direct = 1, /* Optimization for PSRAM */ \
+            /* .psram_dma_direct = 1, /* Optimization for PSRAM */ \ */
         }, \
     }
 
